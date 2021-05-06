@@ -1,3 +1,27 @@
 
 ###Create a topic with partitions and replication factor in a broker###
+
 kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic first_topic --create --partitions 3 --replication-factor 1
+
+
+###To get a list of topics###
+
+kafka-topics.sh --zookeeper 127.0.0.1:2181 --list 
+
+###to get informations about a topic###
+
+kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic first_topic --describe
+
+
+###marke a topic for deletion###
+
+kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic second_topic --delete
+
+###connect my producer with a topic###
+
+kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic first_topic
+
+###Add property to my producer acknoledge###
+
+kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic first_topic --producer-property acks=all
+
