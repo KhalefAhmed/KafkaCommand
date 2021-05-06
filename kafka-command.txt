@@ -1,0 +1,3 @@
+
+###Create a topic with partitions and replication factor in a broker###
+kafka-topics.sh --zookeeper 127.0.0.1:2181 --topic first_topic --create --partitions 3 --replication-factor 1
