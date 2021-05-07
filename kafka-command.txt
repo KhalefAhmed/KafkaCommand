@@ -48,3 +48,7 @@ kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic 
 ###Get the list of Consumer groups###
 
 kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9092 --list
+
+###Describe a specific group###
+
+kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9092 --describe --group my-second-application
