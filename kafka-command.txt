@@ -52,3 +52,7 @@ kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9092 --list
 ###Describe a specific group###
 
 kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9092 --describe --group my-second-application
+
+###Reset offsets###
+
+kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9092 --group my-first-application --reset-offsets --to-earliest --execute --topic first_topic
