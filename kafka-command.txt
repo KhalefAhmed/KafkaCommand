@@ -32,3 +32,11 @@ kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic
 ### consumer from begining###
 
 kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning
+
+###To launch my kafka server###
+
+bin/kafka-server-start.sh config/server.properties
+
+###To launch zookeeper server###
+
+bin/zookeeper-server-start.sh config/zookeeper.properties
