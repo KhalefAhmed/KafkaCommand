@@ -40,3 +40,11 @@ bin/kafka-server-start.sh config/server.properties
 ###To launch zookeeper server###
 
 bin/zookeeper-server-start.sh config/zookeeper.properties
+
+###To launch consumer with group###
+
+kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-first-application
+
+###Get the list of Consumer groups###
+
+kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9092 --list
