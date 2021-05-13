@@ -70,7 +70,11 @@ kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --f
 
 ### Kafka configs ###
 
+kafka-configs.sh --zookeeper 127.0.0.1:2181 --entity-type topics --entity-name first_topic --describe
 
+### add configs to a topic ###
+
+kafka-configs.sh --zookeeper 127.0.0.1:2181 --entity-type topics --entity-name first_topic --add-config min.insync.replicas=2 --alter
 
 
 
