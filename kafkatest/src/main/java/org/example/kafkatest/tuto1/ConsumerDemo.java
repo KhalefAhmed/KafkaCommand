@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Properties;
 
 public class ConsumerDemo {
@@ -32,7 +31,7 @@ public class ConsumerDemo {
         //create consumer
         KafkaConsumer<String,String> consumer = new KafkaConsumer<String, String>(properties);
 
-        //subscribe consumer to our topic
+        //Subscribe consumer to our topic
         consumer.subscribe(Arrays.asList("first_topic"));
 
         //poll for new data
